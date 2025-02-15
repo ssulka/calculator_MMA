@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             int finalI = i;
             btn.setOnClickListener(v -> appendNumber(finalI));
         }
-
+        findViewById(R.id.buttonRemove).setOnClickListener(v -> delete());
         findViewById(R.id.button11).setOnClickListener(v -> setOperation('+'));
         findViewById(R.id.button12).setOnClickListener(v -> setOperation('-'));
         findViewById(R.id.button14).setOnClickListener(v -> setOperation('*'));
@@ -68,4 +68,17 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(String.valueOf(firstValue));
         input.setLength(0);
     }
+
+    private void delete() {
+        if (input.length() > 0) {
+            input.deleteCharAt(input.length() - 1);
+            textView.setText(input.toString());
+        } else {
+            firstValue = Double.NaN;
+            secondValue = 0;
+            currentOperation = '\0';
+            textView.setText("0");
+        }
+    }
+
 }

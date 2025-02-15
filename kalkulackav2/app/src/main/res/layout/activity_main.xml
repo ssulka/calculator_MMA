@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="679dp"
-        android:layout_height="143dp"
+        android:layout_width="673dp"
+        android:layout_height="120dp"
         android:background="#E0E0E0"
         android:gravity="end"
         android:padding="16dp"
@@ -219,6 +219,16 @@
         app:layout_constraintEnd_toStartOf="@+id/button10"
         app:layout_constraintStart_toEndOf="@+id/button6"
         app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/buttonRemove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintTop_toBottomOf="@+id/button16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
     <Button
         android:id="@+id/button11"
